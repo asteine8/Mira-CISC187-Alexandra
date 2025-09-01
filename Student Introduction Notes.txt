@@ -1,0 +1,13 @@
+Please create a short video that shows your face clearly and answer the following questions:
+
+a. Introduction (Your name)
+
+b. Do you have any experience in Computer Programming other than C++?
+Java, JavaScript, Python, C, C# for unity and .net
+
+c. Why are you interested in this course, and why are you taking it?
+mate rov and video game development
+I want to know ways to implement things better
+
+d. What are your expectations from this course?
+Learning more about optimization for memory and processing speed so I can fit more into smaller microcontrollers
