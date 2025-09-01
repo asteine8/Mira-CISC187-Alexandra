@@ -16,7 +16,7 @@ for (int i = 0; i < 100; i++) {
 ```
 
 ## 2. What Will be the Size of Each Element in an Array?
-The size of each array element is determined by the type of variable that the array contains. Additionally, the size of some variables can vary depending on the device that the code is run on. You can use the `sizeof()` function that is built into C++ to determine the size of an array element
+The size of each array element is determined by the type of variable that the array contains. Additionally, the size of some variables can vary depending on the device that the code is run on. You can use the `sizeof()` function that is built into C++ to determine the size of an array element in bytes
 ```cpp
 // Determining the size of an array element
 int someArray[3] = {1,2,3};
@@ -42,7 +42,7 @@ Since you need to shift each element up by one and add the new element, it would
 Since you don't need to shift any elements, it would only take **one operation**
 
 ### Deletion at the beginning of the array
-If you delete the first element of an array, it takes one operation for the deletion and 99 to shift every other element down to compensate for a totoal of **100 operations**
+If you delete the first element of an array, it takes one operation for the deletion and 99 to shift every other element down to compensate for a total of **100 operations**
 
 ### Deletion at the end of the array
 There is no need to shift any of the other elements of the array so this would only take **one operation** for the deletion
