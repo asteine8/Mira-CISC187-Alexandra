@@ -13,6 +13,7 @@ The maximum number of steps a binary search would take is given by $log_2(n)$. F
 ## 4 - Write a C++ code that implements the linear and binary search algorithms. The algorithm should be able to calculate the number of steps against the given search
 See `searchTest.cpp`
 
+### Code
 ```cpp
 #include <iostream>
 
@@ -113,4 +114,17 @@ int main() {
     cout << "It took " << numBinaryOperations << " operations" << endl;
 
 }
+```
+
+### Console Output
+```
+Searching through the array: [2,4,6,8,10,12,13]
+
+Linear Search:
+Found target value 8 at index 3
+It took 4 operations
+
+Binary Search:
+Found target value 8 at index 3
+It took 1 operations
 ```
