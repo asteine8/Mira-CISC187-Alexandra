@@ -1,4 +1,4 @@
-# Week 1 Assignment - Arrays
+# Week 1 Activity - Arrays
 Alexandra Steiner August 31st, 2025
 
 
