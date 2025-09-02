@@ -1,6 +1,8 @@
 # Week 1 Activity - Arrays
 Alexandra Steiner August 31st, 2025
 
+Activity Video can be viewed at [https://youtu.be/TquCZ1ydYGc](https://youtu.be/TquCZ1ydYGc)
+
 
 ## 1. How to Create an Array of 100 Elements
 Use the format `<datatype> <arrayName>[<number of elements>]` to create an empty array. If you want to create an array of 100 elements then use 100 for `<number of elements>`
