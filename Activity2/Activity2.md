@@ -1,6 +1,8 @@
 # Week 2 Activity - Search
 Alexandra Steiner September 1st, 2025
 
+Activity Video can be viewed at [https://youtu.be/rZ7Fr2kScos](https://youtu.be/rZ7Fr2kScos)
+
 ## 1 - How many steps would it take to perform a linear search for the number 8 in the ordered array, [2, 4, 6, 8, 10, 12, 13]?
 Given a linear search algorithm, it would take **4 steps** to find the number 8 in the provided array
 
@@ -11,27 +13,30 @@ A binary search algorithm would take **one step** to find the number 8
 The maximum number of steps a binary search would take is given by $log_2(n)$. For an array of size 100,000 it should take $log_2(100,000)$ steps which comes out to 17 steps
 
 ## 4 - Write a C++ code that implements the linear and binary search algorithms. The algorithm should be able to calculate the number of steps against the given search
-See `searchTest.cpp`
 
 ### Code
+See `searchTestv2.cpp`
 ```cpp
 #include <iostream>
+#include <iterator>
+#include <array>
 
 using namespace std;
+
 
 /**
  * Does a linear search for targetValue in array. Returns how many steps it took to find the target value.
  * 
  * @param array array to search through
- * @param arraySize size of the array
  * @param targetValue the value to search for
  * @param index the index of the element found. Will be -1 if none found
  * 
  * @return the number of steps it took to find the targetValue
  */
-int benchmarkedLinearSearch(int array[], int arraySize, int targetValue, int *index) {
+template<size_t SIZE>
+int benchmarkedLinearSearch(array<int, SIZE> array, int targetValue, int *index) {
     int numOperations = 0;
-    for (int i = 0; i < arraySize; i++) {
+    for (int i = 0; i < array.size(); i++) {
         numOperations ++;
         if (array[i] == targetValue) {
             *index = i;
@@ -54,12 +59,13 @@ int benchmarkedLinearSearch(int array[], int arraySize, int targetValue, int *in
  * 
  * @return the number of steps it took to find the targetValue
  */
-int benchmarkedBinarySearch(int array[], int arraySize, int targetValue, int *index) {
+template<size_t SIZE>
+int benchmarkedBinarySearch(array<int, SIZE> array, int targetValue, int *index) {
     int numOperations = 0;
 
     int L,R,m;
     L = 0;
-    R = arraySize - 1;
+    R = array.size() - 1;
 
     while (L <= R) {
         numOperations ++;
@@ -83,22 +89,23 @@ int benchmarkedBinarySearch(int array[], int arraySize, int targetValue, int *in
 }
 
 int main() {
-    int testArray[7] = {2, 4, 6, 8, 10, 12, 13};
-    int testArraySize = sizeof(testArray) / sizeof(testArray[0]);
+    array<int, 7> testArray{2, 4, 6, 8, 10, 12, 13};
     int t = 8;
 
     // Print out the array
     cout << "Searching through the array: [";
-    for (int i = 0; i < testArraySize-1; i++) {
+    for (int i = 0; i < testArray.size()-1; i++) {
         cout << testArray[i] << ",";
     }
-    cout << testArray[testArraySize - 1] << "]" << endl;
+    cout << testArray[testArray.size() - 1] << "]" << endl;
+    cout << "Array size = " << testArray.size() << endl;
+
 
     cout << endl;
 
     // Run linear search algorithm
     int linearSearchedIndexOft;
-    int numLinearOperations = benchmarkedLinearSearch(testArray, testArraySize, t, &linearSearchedIndexOft);
+    int numLinearOperations = benchmarkedLinearSearch<testArray.size()>(testArray, t, &linearSearchedIndexOft);
 
     cout << "Linear Search:" << endl;
     cout << "Found target value " << t << " at index " << linearSearchedIndexOft << endl;
@@ -107,7 +114,7 @@ int main() {
     cout << endl;
     // Run binary search algorithm
     int binarySearchedIndexOft;
-    int numBinaryOperations = benchmarkedBinarySearch(testArray, testArraySize, t, &binarySearchedIndexOft);
+    int numBinaryOperations = benchmarkedBinarySearch<testArray.size()>(testArray, t, &binarySearchedIndexOft);
 
     cout << "Binary Search:" << endl;
     cout << "Found target value " << t << " at index " << binarySearchedIndexOft << endl;
@@ -119,6 +126,7 @@ int main() {
 ### Console Output
 ```
 Searching through the array: [2,4,6,8,10,12,13]
+Array size = 7
 
 Linear Search:
 Found target value 8 at index 3
