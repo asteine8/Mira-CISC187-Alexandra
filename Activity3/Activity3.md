@@ -1,6 +1,8 @@
 # Week 3 Activity - Sorting 1
 Alexnadra Steiner - 9/8/25
 
+Video Link: [https://youtu.be/2uM52FDAy5o](https://youtu.be/2uM52FDAy5o)
+
 ## 1 - Use Big O Notation to describe the time complexity of an algorithm that takes 4N + 16 steps
 An algorithm that takes 4N + 16 steps has a time complexity of O(N)
 ## 2 - Use Big O Notation to describe the time complexity of an algorithm that takes 2N^2
