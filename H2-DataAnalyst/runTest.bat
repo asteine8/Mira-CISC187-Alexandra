@@ -1,0 +1,1 @@
+TYPE .\testData.txt | .\salesTargetFinder.exe
