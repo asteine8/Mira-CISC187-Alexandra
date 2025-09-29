@@ -41,4 +41,4 @@ std::cout << "Hash of " << myName << " is: " << h << std::endl;
 ## 3. With the help of a figure, explain the problem that occured due to introducing a __tombstone__ to mark the deleted cell. **5 pts**
 Lets say that there was a collision at index 2 and a key that hashes to index 2 needed to be placed at the index 1218 or some far away index. Then, if there was only tombstones between index 8 and 1218 due to deleting a bunch of values from the hash table, you would end up needing to check 1217 cellls just to search for that key in a hash table with only 7 values.
 
-!(SeachingInAHashTableWithTombstones.jpeg)[Searching in a hash table with tombstones]
+![Searching in a hash table with tombstones](SeachingInAHashTableWithTombstones.jpeg)
