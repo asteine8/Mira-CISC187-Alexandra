@@ -1,6 +1,8 @@
 # Week 5 Activity - Hash Tables
 Alexandra Steiner
 
+Video Link: https://youtu.be/jyiTkM7tm9c
+
 ## 1. Assume you have a simple single-dimensional array
 
 ```array = [200, 400, 100, 50, 350]```
