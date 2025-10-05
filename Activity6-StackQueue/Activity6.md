@@ -1,7 +1,7 @@
 # Week 6 Activity - Stacks and Queues
 Alexandra Steiner
 
-Video Link: 
+Video Link: https://youtu.be/EPT-X3JVvm4
 
 ## Using Figure 17 as a model, in the book [Data Structures in C++](https://d-khan.github.io/ds), illustrate the result of each operation in the sequence PUSH(S,4), PUSH(S,1), PUSH(S,3), POP(S), PUSH(S,8), and POP(S) on an initially empty stack $S$ stored in array $S[1..6]$. ***Code is not required.*** **3 pts** 
 Initial Empty Array `S[1..6]`
