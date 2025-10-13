@@ -19,7 +19,6 @@ void MakiMakiLinkedList<T>::addNode(T newData) {
     // Link it to the next node
     newNode->nextNode = firstNode;
     firstNode = newNode;
-
 }
 
 /**

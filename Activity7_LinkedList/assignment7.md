@@ -1,7 +1,7 @@
 # Activity 7 - Linked lists
 Alexandra Steiner 10-12-25
 
-Video Link: 
+Video Link: https://youtu.be/tCIajMvYf3A
 
 ## Assignment
 ```
